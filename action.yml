@@ -1,0 +1,13 @@
+name: 'Setup Bundletool'
+description: 'Bundletool is a tool to manipulate Android App Bundles and Android SDK Bundles.'
+inputs:
+  version:
+    description: 'bundletool version'
+    required: false
+    default: 'latest'
+runs:
+  using: 'node20'
+  main: 'dist/index.js'
+branding:
+  color: orange
+  icon: package

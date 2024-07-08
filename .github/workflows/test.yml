@@ -1,0 +1,18 @@
+name: Test
+
+on: [ push ]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Bundletool latest
+        uses: ./
+        with:
+          version: latest
+
+      - name: Setup Bundletool 1.16.0
+        uses: ./
+        with:
+          version: 1.16.0
