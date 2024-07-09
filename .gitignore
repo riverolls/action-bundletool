@@ -1,2 +1,11 @@
+# IDE files
+.idea
+.vscode
+*.code-workspace
+
+# OS metadata
 .DS_Store
+Thumbs.db
+
+# Dependency directory
 node_modules

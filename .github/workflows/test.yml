@@ -7,12 +7,15 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Setup Bundletool latest
-        uses: ./
+      - name: Setup Java
+        uses: actions/setup-java@v4
         with:
-          version: latest
+          distribution: 'zulu'
+          java-version: '17'
 
-      - name: Setup Bundletool 1.16.0
+      - name: Setup Bundletool latest
+        id: bundletool
         uses: ./
-        with:
-          version: 1.16.0
+
+      - name: Use jar path
+        run: java -jar ${{steps.bundletool.outputs.jar_path}} version
